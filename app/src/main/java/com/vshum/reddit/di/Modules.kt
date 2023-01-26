@@ -7,9 +7,9 @@ import com.vshum.reddit.data.api.ApiRequests
 import com.vshum.reddit.data.api.RedditApiRepository
 import com.vshum.reddit.data.db.CacheRepository
 import com.vshum.reddit.data.db.DBConstants
-import com.vshum.reddit.data.db.dao.AppDB
-import com.vshum.reddit.data.db.dao.LocalCacheRepository
-import com.vshum.reddit.data.db.dao.RetrofitHelper
+import com.vshum.reddit.data.db.AppDB
+import com.vshum.reddit.data.db.LocalCacheRepository
+import com.vshum.reddit.data.api.RetrofitHelper
 import com.vshum.reddit.ui.MainFragment
 import com.vshum.reddit.ui.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -22,9 +22,9 @@ object Modules {
     val application = module {
         //база данных
         single<AppDB>(qualifier = named(Scopes.DB)) {
-            Room.databaseBuilder(get(), AppDB::class.java, DBConstants.NAME).build()
+            Room.databaseBuilder(get(), AppDB::class.java, DBConstants.NAME)
+                .build()
         }
-
         single<CacheRepository>(qualifier = named(Scopes.DB_REPOSITORY)) {
             LocalCacheRepository(get(qualifier = named(Scopes.DB)))
         }
@@ -33,15 +33,14 @@ object Modules {
         single<Retrofit>(qualifier = named(Scopes.RETROFIT)) {
             RetrofitHelper.create()
         }
-
         single<ApiRequests>(qualifier = named(Scopes.API)) {
             get<Retrofit>(qualifier = named(Scopes.RETROFIT)).create(ApiRequests::class.java)
         }
-
         single<ApiRepository>(qualifier = named(Scopes.API_REPOSITORY)) {
             RedditApiRepository(get(qualifier = named(Scopes.API)))
         }
     }
+
     //модуль основного экрана
     @ExperimentalPagingApi
     val mainWindow = module {
@@ -53,5 +52,4 @@ object Modules {
             }
         }
     }
-
 }

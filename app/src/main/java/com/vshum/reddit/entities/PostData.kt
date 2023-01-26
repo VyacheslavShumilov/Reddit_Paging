@@ -1,4 +1,4 @@
-package com.vshum.reddit.data.db.entities
+package com.vshum.reddit.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

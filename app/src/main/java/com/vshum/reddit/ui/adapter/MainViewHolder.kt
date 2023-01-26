@@ -1,7 +1,7 @@
 package com.vshum.reddit.ui.adapter
 
 import androidx.recyclerview.widget.RecyclerView
-import com.vshum.reddit.data.db.entities.PostData
+import com.vshum.reddit.entities.PostData
 import com.vshum.reddit.databinding.ItemListBinding
 import com.vshum.reddit.extesions.asString
 import java.util.*

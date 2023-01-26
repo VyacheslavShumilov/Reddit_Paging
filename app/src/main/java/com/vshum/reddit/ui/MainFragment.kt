@@ -14,7 +14,7 @@ import org.koin.core.qualifier.named
 import org.koin.java.KoinJavaComponent
 
 @ExperimentalPagingApi
-class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::inflate) {
+class MainFragment: BaseFragment<FragmentMainBinding>(FragmentMainBinding::inflate) {
 
     private val scope = KoinJavaComponent.getKoin().createScope<MainFragment>()
     private val viewModel: MainViewModel = scope.get(qualifier = named(Scopes.MAIN_VIEW_MODEL))
@@ -26,6 +26,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
                 adapter.submitData(it)
             }
         }
+
         initViews()
     }
 

@@ -1,4 +1,4 @@
-package com.vshum.reddit.data.db.dao
+package com.vshum.reddit.data.api
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

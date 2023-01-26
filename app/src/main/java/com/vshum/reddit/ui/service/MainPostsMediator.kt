@@ -9,10 +9,12 @@ import androidx.room.Transaction
 import com.vshum.reddit.AppConstants
 import com.vshum.reddit.data.api.ApiRepository
 import com.vshum.reddit.data.db.CacheRepository
-import com.vshum.reddit.data.db.entities.PostData
+import com.vshum.reddit.entities.PostData
 
 @ExperimentalPagingApi
-class MainPostsMediator(private val cacheRepository: CacheRepository, private val apiRepository: ApiRepository): RemoteMediator<Int, PostData>() {
+class MainPostsMediator(private val cacheRepository: CacheRepository,
+                        private val apiRepository: ApiRepository): RemoteMediator<Int, PostData>() {
+
     /**
      * Загрузить данные для списка.
      * @param loadType вариант загрузки данных (первичная загрузка, добавление данных в конец или начало).

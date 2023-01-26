@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import com.vshum.reddit.data.db.entities.PostData
+import com.vshum.reddit.entities.PostData
 import com.vshum.reddit.databinding.ItemListBinding
 
 class MainAdapter: PagingDataAdapter<PostData, MainViewHolder>(diffUtil) {

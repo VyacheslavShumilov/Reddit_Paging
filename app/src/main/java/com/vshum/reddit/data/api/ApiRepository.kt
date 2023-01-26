@@ -1,6 +1,6 @@
 package com.vshum.reddit.data.api
 
-import com.vshum.reddit.data.db.entities.PostData
+import com.vshum.reddit.entities.PostData
 
 /** Интерфейс работы с API */
 interface ApiRepository {

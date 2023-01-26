@@ -1,12 +1,14 @@
-package com.vshum.reddit.data.db.dao
+package com.vshum.reddit.data.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.vshum.reddit.data.db.DBConstants
-import com.vshum.reddit.data.db.entities.PostData
+import com.vshum.reddit.data.db.dao.ResponseDataDao
+import com.vshum.reddit.entities.PostData
 
 @Database(
-    entities = [PostData::class],
+    entities = [
+        PostData::class
+    ],
     version = DBConstants.VERSION,
     exportSchema = true)
 abstract class AppDB: RoomDatabase() {

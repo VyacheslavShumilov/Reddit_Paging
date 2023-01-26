@@ -1,7 +1,7 @@
 package com.vshum.reddit.data.api
 
-import com.vshum.reddit.data.db.entities.PostData
-import com.vshum.reddit.data.db.entities.ResponseRoot
+import com.vshum.reddit.entities.PostData
+import com.vshum.reddit.entities.ResponseRoot
 
 class RedditApiRepository(private val apiRequests: ApiRequests): ApiRepository {
 
