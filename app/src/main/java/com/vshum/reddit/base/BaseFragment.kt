@@ -24,6 +24,8 @@ abstract class BaseFragment<VB : ViewBinding>(private val inflate: InflateFragme
     }
 
     /** Метод, вызываемый при создании фрагмента */
-    private fun afterOnCreateView() {
+    open fun afterOnCreateView() {
     }
+
+
 }
