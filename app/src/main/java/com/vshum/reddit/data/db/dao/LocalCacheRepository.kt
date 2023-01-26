@@ -1,0 +1,29 @@
+package com.vshum.reddit.data.db.dao
+
+import androidx.paging.PagingSource
+import com.vshum.reddit.data.db.CacheRepository
+import com.vshum.reddit.data.db.entities.PostData
+
+/** Кеширование данных в локальную БД */
+class LocalCacheRepository(private val db: AppDB): CacheRepository {
+
+    /**
+     * Сохранить посты.
+     * @param posts список постов для сохранения.
+     */
+    override suspend fun insertAll(posts: List<PostData>) {
+        db.responseDataDao().insertAll(posts)
+    }
+
+    /**
+     * Получить список постов, которые были до определенной даты.
+     * @return список постов, отсортированный по дате.
+     */
+    override fun getPostsBeforeDate(): PagingSource<Int, PostData> =
+        db.responseDataDao().getPostsBeforeDate()
+
+    /** Удалить все записи */
+    override suspend fun deleteAll() {
+        db.responseDataDao().deleteAll()
+    }
+}
