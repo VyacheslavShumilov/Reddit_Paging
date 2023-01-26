@@ -1,4 +1,4 @@
-package com.vshum.reddit.ui
+package com.vshum.reddit.windows
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
@@ -6,8 +6,8 @@ import androidx.paging.*
 import com.vshum.reddit.AppConstants
 import com.vshum.reddit.data.api.ApiRepository
 import com.vshum.reddit.data.db.CacheRepository
-import com.vshum.reddit.entities.PostData
-import com.vshum.reddit.ui.service.MainPostsMediator
+import com.vshum.reddit.data.entities.PostData
+import com.vshum.reddit.windows.service.MainPostsMediator
 
 @ExperimentalPagingApi
 class MainViewModel(private val cacheRepository: CacheRepository,

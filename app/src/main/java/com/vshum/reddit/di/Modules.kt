@@ -10,8 +10,8 @@ import com.vshum.reddit.data.db.DBConstants
 import com.vshum.reddit.data.db.AppDB
 import com.vshum.reddit.data.db.LocalCacheRepository
 import com.vshum.reddit.data.api.RetrofitHelper
-import com.vshum.reddit.ui.MainFragment
-import com.vshum.reddit.ui.MainViewModel
+import com.vshum.reddit.windows.MainFragment
+import com.vshum.reddit.windows.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
 import org.koin.dsl.module

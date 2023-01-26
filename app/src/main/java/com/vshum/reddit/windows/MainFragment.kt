@@ -1,4 +1,4 @@
-package com.vshum.reddit.ui
+package com.vshum.reddit.windows
 
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.ExperimentalPagingApi
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.vshum.reddit.base.BaseFragment
 import com.vshum.reddit.databinding.FragmentMainBinding
 import com.vshum.reddit.di.Scopes
-import com.vshum.reddit.ui.adapter.MainAdapter
+import com.vshum.reddit.windows.adapter.MainAdapter
 import kotlinx.coroutines.launch
 import org.koin.core.qualifier.named
 import org.koin.java.KoinJavaComponent

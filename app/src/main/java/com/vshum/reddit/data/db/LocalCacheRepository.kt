@@ -1,7 +1,7 @@
 package com.vshum.reddit.data.db
 
 import androidx.paging.PagingSource
-import com.vshum.reddit.entities.PostData
+import com.vshum.reddit.data.entities.PostData
 
 /** Кеширование данных в локальную БД */
 class LocalCacheRepository(private val db: AppDB): CacheRepository {

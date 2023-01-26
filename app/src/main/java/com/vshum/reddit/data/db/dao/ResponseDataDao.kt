@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.vshum.reddit.data.db.DBConstants
-import com.vshum.reddit.entities.PostData
+import com.vshum.reddit.data.entities.PostData
 
 /** Работа с локальной базой */
 @Dao
@@ -16,7 +16,7 @@ interface ResponseDataDao {
      * @param posts список постов для сохранения.
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(posts: List<PostData>): List<Long>
+    suspend fun insertAll(posts: List<PostData>)
 
     /**
      * Получить список постов, которые были до определенной даты.
@@ -29,5 +29,5 @@ interface ResponseDataDao {
     /** Удалить все записи из базы */
     @Query("delete " +
             "from ${DBConstants.TABLE_CACHE} ")
-    fun deleteAll(): Int
+    suspend fun deleteAll()
 }

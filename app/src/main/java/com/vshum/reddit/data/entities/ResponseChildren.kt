@@ -1,11 +1,11 @@
-package com.vshum.reddit.entities
+package com.vshum.reddit.data.entities
 
 import com.google.gson.annotations.SerializedName
 
-data class ResponseRoot (
+data class ResponseChildren (
     @SerializedName("kind")
     val kind: String,
 
     @SerializedName("data")
-    val data: ResponseMainData
+    val data: PostData
 )

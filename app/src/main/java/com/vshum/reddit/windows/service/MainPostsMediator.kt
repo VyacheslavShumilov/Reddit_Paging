@@ -1,4 +1,4 @@
-package com.vshum.reddit.ui.service
+package com.vshum.reddit.windows.service
 
 import android.util.Log
 import androidx.paging.ExperimentalPagingApi
@@ -9,7 +9,7 @@ import androidx.room.Transaction
 import com.vshum.reddit.AppConstants
 import com.vshum.reddit.data.api.ApiRepository
 import com.vshum.reddit.data.db.CacheRepository
-import com.vshum.reddit.entities.PostData
+import com.vshum.reddit.data.entities.PostData
 
 @ExperimentalPagingApi
 class MainPostsMediator(private val cacheRepository: CacheRepository,

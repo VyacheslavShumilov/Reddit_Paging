@@ -1,4 +1,4 @@
-package com.vshum.reddit.entities
+package com.vshum.reddit.data.entities
 
 import com.google.gson.annotations.SerializedName
 

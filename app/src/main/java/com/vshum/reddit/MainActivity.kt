@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.paging.ExperimentalPagingApi
 import com.vshum.reddit.databinding.ActivityMainBinding
-import com.vshum.reddit.ui.MainFragment
+import com.vshum.reddit.windows.MainFragment
 
 @ExperimentalPagingApi
 class MainActivity : AppCompatActivity() {
