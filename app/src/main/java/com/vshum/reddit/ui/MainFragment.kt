@@ -38,6 +38,4 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
             it.recyclerview.addItemDecoration(DividerItemDecoration(context, LinearLayoutManager.VERTICAL))
         }
     }
-
-
 }

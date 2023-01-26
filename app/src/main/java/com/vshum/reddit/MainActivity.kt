@@ -3,6 +3,7 @@ package com.vshum.reddit
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.vshum.reddit.databinding.ActivityMainBinding
+import com.vshum.reddit.ui.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

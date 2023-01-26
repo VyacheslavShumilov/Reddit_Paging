@@ -19,7 +19,5 @@ class MainViewModel(private val cacheRepository: CacheRepository, private val ap
 
     private fun getDefaultPageConfig(): PagingConfig {
         return PagingConfig(pageSize = AppConstants.LIMIT_POSTS, enablePlaceholders = false)
-
     }
-
 }
