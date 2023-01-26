@@ -16,6 +16,7 @@ interface ResponseDataDao {
      * @param posts список постов для сохранения.
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
+
     suspend fun insertAll(posts: List<PostData>)
 
     /**
@@ -29,5 +30,6 @@ interface ResponseDataDao {
     /** Удалить все записи из базы */
     @Query("delete " +
             "from ${DBConstants.TABLE_CACHE} ")
-    suspend fun deleteAll()
+    suspend fun deleteAll(): Int
+
 }
